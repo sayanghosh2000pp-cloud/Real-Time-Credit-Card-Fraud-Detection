@@ -1,5 +1,4 @@
-# Real-Time-Credit-Card-Fraud-Detection
-Real-Time Credit Card Fraud Detection (Rule-Based)
+
 # Real-Time Credit Card Fraud Detection (Rule-Based)
 
 ## Description
@@ -28,3 +27,19 @@ The project demonstrates data engineering and analytics skills using Python, Pan
 1. **Run analytics simulation** (no Kafka needed):
 ```bash
 python analytics_simulation.py
+```
+This generates CSV outputs and images in `outputs/` folder.
+
+2. **Optional Streaming Version**:
+- Start Zookeeper & Kafka
+- Create topic `credit_txn_stream`
+- Use `producer.py` to send events
+- Run `fraud_stream.py` with Spark
+
+## Outputs (Screenshots)
+**Average Transaction Amount per User**  
+![Sample Output](outputs/sample_output.png)
+
+**Fraud Events Over Time**  
+![Fraud Time Series](outputs/fraud_timeseries.png)
+
